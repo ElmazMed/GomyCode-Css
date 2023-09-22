@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --heading-font: 'Playfair Display', serif;
+    --main-color: #212529;
+}
+header {
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+header nav {
+    display: flex;
+}
+header nav .logo h1,span {
+    font-family: var(--heading-font);
+    font-size: 40px;
+}
+header nav .logo h1 span {
+    color: #a4bdcb;
+}
+header nav .navbar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+header nav .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav .navbar ul li a {
+    text-decoration: none;
+    font-size: 23px;
+    color: #212529;
+    opacity: .7;
+    margin-right: 70px;
+    transition: .5s ease-in-out;
+}
+header nav .navbar ul li .active {
+    opacity: 1;
+}
+header nav .navbar ul li a:hover {
+    opacity: 1;
+}
+header nav .icons {
+    display: flex;
+    align-items: center;
+}
+header nav .icons a {
+    color: var(--main-color);
+    margin-right: 12px;
+}
+header nav .icons a:last-child {
+    margin-right: 0px;
+}
+
+.infos {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+.infos .empty-div {
+    max-width: 50%;
+    flex: 1 0 0%;
+}
+.infos figure {
+    position: relative;
+    margin: -30px;
+}
+.infos figure img {
+    border-bottom-left-radius: 30px;
+}
+.infos  .info-content {
+    max-width: 570px;
+    position: absolute;
+    left: calc(-40vw / 2);
+    top: 25vh;
+    z-index: 2;
+}
+.infos  .info-content h1 {
+    font-family: var(--heading-font);
+    color: var(--main-color);
+    font-size: 5.4em;
+    font-weight: 800
+}
+.infos  .info-content h4  {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    margin: 27px 0px;
+}
+.infos  .info-content a {
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 13px 45px;
+    color: var(--main-color);
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: all ease-in-out .7s;
+    cursor: pointer;
+}
+.infos  .info-content a:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.about {
+    display: flex;
+}
