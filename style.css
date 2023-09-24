@@ -8,6 +8,9 @@
     --heading-font: 'Playfair Display', serif;
     --main-color: #212529;
 }
+html {
+    scroll-behavior: smooth;
+}
 header {
     padding: 30px;
     position: fixed;
@@ -63,6 +66,7 @@ header nav .icons a {
 header nav .icons a:last-child {
     margin-right: 0px;
 }
+/* End of header */
 
 .infos {
     padding: 30px;
@@ -116,6 +120,185 @@ header nav .icons a:last-child {
     background-color: var(--main-color);
     color: #fff;
 }
+/* End of infos section */
 .about {
     display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+.about .picture {
+    flex: 0 0 auto;
+    width: 50%;
+    justify-content: flex-end;
+    display: flex;
+}
+.about .picture img {
+    border-top-right-radius: 30px;
+}
+.about .texts {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-top: 4rem;
+    padding: 8rem;
+}
+.about .texts h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    color: var(--main-color);
+    position: relative;
+    margin-bottom: 60px;
+}
+.about .texts h1::before {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    border-bottom: 1px solid #000;
+    width: 40px;
+}
+.about .texts p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    color: #212529;
+    opacity: .7;
+}
+/* End of about section */
+.portfolio {
+    padding: 30px;
+}
+.portfolio h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    color: var(--main-color);
+    margin-bottom: 60px;
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+}
+.portfolio h1::before {
+    content: '';
+    border-bottom: 1px solid #000;
+    bottom: -20px;
+    left: calc(50% - 30px);
+    width: 60px;
+    position: absolute;
+}
+.portfolio .jobs {
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    grid-template-rows: 38%;
+    row-gap: 6%;
+    column-gap: 2.5%;
+}
+.portfolio .jobs img {
+    max-width: 100%;
+    height: auto;
+}
+.portfolio .jobs .thumb-5 {
+    display: grid;
+    row-gap: 7%;
+}
+/* End of portfolio section */
+.contact {
+    padding: 30px;
+    padding-bottom: 0;
+    background-color: #eef7f9;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact h1 {
+    font-family: var(--heading-font);
+    font-size: 2.5em;
+    color: var(--main-color);
+    margin-bottom: 60px;
+    position: relative;
+}
+.contact h1::before {
+    content: '';
+    position: absolute;
+    border: 1px solid #000;
+    width: 6%;
+    bottom: -20px;
+}
+.contact .contact-form {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 3rem;
+}
+.contact .contact-form form .inputs-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact .contact-form form .inputs-text div {
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 15px;
+}
+.contact .contact-form .inputs-text div input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8f8f8f;
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 40px;
+    outline: none;
+    color: #8f8f8f;
+}
+.contact .contact-form .inputs-text div input::placeholder {
+    color: #00000099;
+}
+.contact .contact-form form .inputs-text .message {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.contact .contact-form .inputs-text .message textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #8f8f8f;
+    border-radius: 5px;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    width: 100%;
+    margin-bottom: 40px;
+    outline: none;
+    color: #8f8f8f;
+    resize: vertical;
+}
+.contact .contact-form button {
+    background-color: #212529;
+    border: none;
+    padding: 17px 45px;
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.contact .contact-img {
+    margin-top: -170px;
+    margin-bottom: 0;
+}
+.contact .contact-img img {
+    height: 100%;
+}
+/* End of contact section */
+footer {
+    padding: 30px;
+}
+footer p {
+    text-align: center;
+    font-size: 1.3em;
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+footer a {
+    text-decoration: none;
+    color: crimson;
+    font-family: var(--heading-font);
 }
