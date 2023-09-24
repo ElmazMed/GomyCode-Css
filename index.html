@@ -12,7 +12,7 @@
     <title>Photographer</title>
 </head>
 <body>
-    <header id="header-sec">
+    <header id="header-sec" class="">
         <nav>
             <div class="logo">
                 <h1>Alena <span>Lee</span></h1>
@@ -98,5 +98,17 @@
     <footer>
         <p>Coded with all the ❤️ by <a href="https://github.com/ElmazMed" target="_blank">Mohamed</a></p>
     </footer>
+    <script>
+        function toggleNavBackground() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('nav-scrolled');
+            } else {
+                header.classList.remove('nav-scrolled');
+            }
+        }
+        window.addEventListener('scroll', toggleNavBackground);
+        toggleNavBackground();
+    </script>
 </body>
 </html>
